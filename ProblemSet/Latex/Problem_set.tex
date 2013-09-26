@@ -1,5 +1,5 @@
 \documentclass[twocolumn,10]{article}
-
+\newgeometry{top=1cm, bottom=1cm}
 \usepackage{hyperref}
 
 \usepackage{graphicx}  % needed for figures
@@ -111,8 +111,28 @@
 \section{Error propagation} % (fold)
 \label{sec:error_propagation}
 \subsection{}
+Three different ways are employed to calculate the average of the given measurements, namely the arithmetic mean, a error weighted mean and finally a fit with a zeroth order polynomial.
+The last two options require to accept and believe in the reported experimental errors.
+The results are reported in Figure~\ref{fig:g}.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=.4\textwidth]{fig/g.pdf}
+	\end{center}
+	\caption{Graphical presentation of the given measurements and three differently calculated averages. The shadowed areas around each average value are $\pm \sigma_{\mu}$ the associated error.}
+	\label{fig:g}
+\end{figure}
+The $\chi ^2 $ probability density function is reported in Figure~\ref{fig:xpdf} along with the probability of getting the same $\chi ^2 $ found in the aforementioned zeroth order polynomial fit.
+
+\begin{figure}[!]
+	\begin{center}
+		\includegraphics[width=.4 \textwidth]{fig/xpdf.pdf}
+	\end{center}
+	\caption{$\chi^2$ distribution for five degrees of freedom.}
+	\label{fig:xpdf}
+\end{figure}
 % section error_propagation (end)
 
+\clearpage
 \section{Monte Carlo} % (fold)
 \label{sec:monte_carlo}
 
