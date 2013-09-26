@@ -1,5 +1,9 @@
-\documentclass[twocolumn,10]{article}
-\newgeometry{top=1cm, bottom=1cm}
+\documentclass[twocolumn]{article}
+% there is no bottommargin in TeX, but I invent one for consistency
+\usepackage[
+top    = 3 cm,
+bottom =  3 cm]{geometry}
+
 \usepackage{hyperref}
 
 \usepackage{graphicx}  % needed for figures
@@ -110,29 +114,54 @@
 % section Distributions and probabilities (end)
 \section{Error propagation} % (fold)
 \label{sec:error_propagation}
-\subsection{}
-Three different ways are employed to calculate the average of the given measurements, namely the arithmetic mean, a error weighted mean and finally a fit with a zeroth order polynomial.
-The last two options require to accept and believe in the reported experimental errors.
-The results are reported in Figure~\ref{fig:g}.
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=.4\textwidth]{fig/g.pdf}
-	\end{center}
-	\caption{Graphical presentation of the given measurements and three differently calculated averages. The shadowed areas around each average value are $\pm \sigma_{\mu}$ the associated error.}
-	\label{fig:g}
-\end{figure}
-The $\chi ^2 $ probability density function is reported in Figure~\ref{fig:xpdf} along with the probability of getting the same $\chi ^2 $ found in the aforementioned zeroth order polynomial fit.
+\subsection{} % (fold)
+	Three different ways are employed to calculate the average of the given measurements, namely the arithmetic mean, a error weighted mean and finally a fit with a zeroth order polynomial.
+	The last two options require to accept and believe in the reported experimental errors.
+	The results are reported in Figure~\ref{fig:g}.
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics[width=.4\textwidth]{fig/g.pdf}
+		\end{center}
+		\caption{Graphical presentation of the given measurements and three differently calculated averages. The shadowed areas around each average value are $\pm \sigma_{\mu}$ the associated error.}
+		\label{fig:g}
+	\end{figure}
+	The $\chi ^2 $ probability density function is reported in Figure~\ref{fig:xpdf} along with the probability of getting the same $\chi ^2 $ found in the aforementioned zeroth order polynomial fit.
+	\begin{figure}[!]
+		\begin{center}
+			\includegraphics[width=.4 \textwidth]{fig/xpdf.pdf}
+		\end{center}
+		\caption{$\chi^2$ distribution for five degrees of freedom.}
+		\label{fig:xpdf}
+	\end{figure}
+	The result obtained are summarized in Table~\ref{tab:res}.
+	\begin{table}[h]
+		\caption{Results}
+		\label{tab:res}
+		\begin{center}
+			\begin{tabular}{l|ccc}
+			\hline
 
-\begin{figure}[!]
-	\begin{center}
-		\includegraphics[width=.4 \textwidth]{fig/xpdf.pdf}
-	\end{center}
-	\caption{$\chi^2$ distribution for five degrees of freedom.}
-	\label{fig:xpdf}
-\end{figure}
-% section error_propagation (end)
+			\hline
+			\textbf{method} & \textbf{average} & \textbf{uncertainty} & \textbf{$\chi ^2 $,(prob)} \\
+			\hline
+			fit & 6.5 & .2 & 12.261 (0.031) \\
+			$<G> $ & 6.9 & .3 & - \\
+			$<G>_W$ &  7.1 & .2 & - \\
+			\hline
+			\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	% section error_propagation (end)
+	As it possible to see the fit is the method that is better representing the data with an average value.
+	Moreover it is also compatible with the \emph{true} value of G (=6.67).
+	The probability of the fit is not particularity high but is expected due to the low number of measurements.
+	Lastly it is possible to note that the probability to get $\chi ^2 \gtrsim 12.261 $ is $ \lesssim 0.012$ according the the $\chi ^2$ distribution (Figure~\ref{fig:xpdf}).
+\subsection{} % (fold)
+	\label{sub:}
 
-\clearpage
+	% subsection  (end)
+
 \section{Monte Carlo} % (fold)
 \label{sec:monte_carlo}
 
