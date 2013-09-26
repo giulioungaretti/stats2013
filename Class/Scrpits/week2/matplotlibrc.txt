@@ -1,0 +1,121 @@
+#!/usr/bin/env python
+
+# ----------------------------------------------------------------------------------- #
+# 
+#   ROOT macro for analysing the coffee usage in the NBI group.
+# 
+#   For a period in 2009-2010, the usage of the old coffey machine in the
+#   NBI HEP group was (somewhat irregularly) monitored. Below is the count
+#   of total number of cups of coffey brewed at given dates.
+# 
+#   28479   4/11-2009
+#   28674  13/11-2009
+#   28777  18/11-2009
+#   28964  25/11-2009
+#   29041  27/11-2009
+#   29374  10/12-2009
+#  ~29650   8/ 1-2010
+#   30001  29/ 1-2010 (?)
+#   30221   8/ 2-2010
+#   30498  21/ 2-2010
+#   32412  17/ 5-2010
+#   33676  11/ 8-2010
+#   34008   9/ 9-2010
+# 
+#   Author: Troels C. Petersen (NBI)
+#   Email:  petersen@nbi.dk
+#   Date:   11th of September 2013
+#
+#   Author: Lars Egholm Pedersen (NBI/CERN)
+#   Email:  egholm@cern.ch
+# 
+# ----------------------------------------------------------------------------------- #
+
+from ROOT import *
+from array import array
+
+# ----------------------------------------------------------------------------------- #
+def sqr( a ) : 
+    return a*a
+
+# ----------------------------------------------------------------------------------- #
+def func_coffee( x, par ) : 
+    return par[0] + par[1]*x[0]
+
+
+# ----------------------------------------------------------------------------------- #
+# Coffee Usage
+# ----------------------------------------------------------------------------------- #
+
+# Set the showing of statistics and fitting results (0 means off, 1111 means all on):
+gROOT.Reset()
+gStyle.SetOptStat(1111)
+gStyle.SetOptFit(1111)
+
+# Statistics and fitting results replaced in:
+gStyle.SetStatX(0.87)    # Bottom right corner.
+gStyle.SetStatY(0.37)
+
+
+# Data set (So small that we will not use a seperate file for it!)
+# We define 4th of November 2009 to be day 0, and count from there.
+Ndata = 13
+days  = array( 'f', [     0,     9,    14,    21,    23,    36,    65,    76,    86,    99,   194,   280,   309 ] ) 
+cups  = array( 'f', [ 28479, 28674, 28777, 28964, 29041, 29374, 29650, 30001, 30221, 30498, 32412, 33676, 34008 ] )
+edays = array( 'f', [0.0]*Ndata )
+ecups = array( 'f', [0.0]*Ndata )
+
+# Assign errors to these data points (just crude estimate!!!):
+for i in range( Ndata ) : 
+    edays[i] =  0.0
+    ecups[i] = 30.0      # I estimate the uncertainty to be 30 cups, but perhaps you disagree?
+    print"  days: %3.0f    cups: %5.0f"%( days[i], cups[i] )
+
+
+# ----------------------------------------------------------------------------------- #
+# Fit and plot histogram on screen:
+
+# Make canvas:
+canvas = TCanvas( "canvas", "", 250, 20, 600, 450 )    # Make a new window
+
+# Make a graph (which differs from a histogram by being created from pairs of x and y values):
+graph = TGraphErrors( Ndata, days, cups, edays, ecups )
+
+# Fit the data with a function (which you define):
+fit = TF1( "fit", func_coffee, -10.0, 380.0, 2 )       # Define your model/hypothesis
+graph.Fit("fit","r")                                   # Fit graph with function
+graph.GetXaxis().SetRangeUser(-20.0,400.0)
+graph.SetLineColor(4)
+graph.SetLineWidth(2)
+graph.Draw("AP")
+
+canvas.Update()
+# canvas.SaveAs("Result_CoffeeUsage.png")   # Alternative formats: jpg, eps, pdf, etc!
+
+
+raw_input( ' ... Press Enter to exit ... ' )
+
+# ----------------------------------------------------------------------------------- # 
+# 
+# Questions:
+# ----------
+# 1) Assuming the error of 30 cups, do the numbers follow the hypothesis of
+#    constant use? Quantify this, and find out how large the error has to be,
+#    for this hypothesis to be credible.
+#
+# 2) Consider only the data from the first 100 days. Does taking into account
+#    Christmas vacations improve the above hypothesis? Can you actually fit
+#    the length of vacation?
+#    Try to rewrite the function "func_coffee", such that it includes an "if",
+#    dividing the function into two linear functions with the same slope, that
+#    has an interval with no usage.
+# 
+# 3) The total number of cups of coffey ever brewed was 36716, after which the
+#    old coffey machine was decommissioned. From the above data, estimate when
+#    this happened (including error!)
+#    And when would you estimate that the coffey machine was commissioned
+#    originally?
+# 
+#    The true answers to question 3) will be revealed Monday morning :-)
+#
+# ----------------------------------------------------------------------------------- #
