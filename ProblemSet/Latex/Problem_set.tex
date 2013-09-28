@@ -1,41 +1,40 @@
 \documentclass[twocolumn]{article}
-% there is no bottommargin in TeX, but I invent one for consistency
-\usepackage[
-top    = 3 cm,
-bottom =  3 cm]{geometry}
+	\usepackage[
+	top    = 3 cm,
+	bottom =  3 cm]{geometry}
 
-\usepackage{hyperref}
+	\usepackage{hyperref}
 
-\usepackage{graphicx}  % needed for figures
-\usepackage{dcolumn}   % needed for some tables
-\usepackage{bm}        % for math
-\usepackage{amssymb}   % for math
-\usepackage{amsmath}
-\usepackage{nameref}
-\newcommand{\degree}{\ensuremath{^\circ}}
-\def\mean#1{\left< #1 \right>}
-%%% make INLINE SUBSECTIONS 
-	
-	% 1em is in the 'sep' slot, which controls how much space is between the numbering and the section heading text. 1em is equal to the width of 1 times the width of a capital 'M' in font you're using. 
-\usepackage{titlesec}
-\titleformat{\subsection}[runin]
-{\normalfont\large\bfseries}{\thesubsection}{1em}{}
-	% The formatting settings above other than the 'runin' option are the default settings for subsections. 
+	\usepackage{graphicx}  % needed for figures
+	\usepackage{dcolumn}   % needed for some tables
+	\usepackage{bm}        % for math
+	\usepackage{amssymb}   % for math
+	\usepackage{amsmath}
+	\usepackage{nameref}
+	\newcommand{\degree}{\ensuremath{^\circ}}
+	\def\mean#1{\left< #1 \right>}
+	%%% make INLINE SUBSECTIONS 
+		
+		% 1em is in the 'sep' slot, which controls how much space is between the numbering and the section heading text. 1em is equal to the width of 1 times the width of a capital 'M' in font you're using. 
+	\usepackage{titlesec}
+	\titleformat{\subsection}[runin]
+	{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+		% The formatting settings above other than the 'runin' option are the default settings for subsections. 
 
 
-\begin{document}
-\title{Problem set }
-\author{Giulio Ungaretti}
-\date{\today}
-\twocolumn[
-   \begin{@twocolumnfalse}
-     \maketitle
-     \begin{abstract}
-       Problem set solutions.
-     \end{abstract}
-     \tableofcontents
-   \end{@twocolumnfalse}
-  ]
+	\begin{document}
+	\title{Problem set }
+	\author{Giulio Ungaretti}
+	\date{\today}
+	\twocolumn[
+	   \begin{@twocolumnfalse}
+	     \maketitle
+	     \begin{abstract}
+	       Problem set solutions.
+	     \end{abstract}
+	     \tableofcontents
+	   \end{@twocolumnfalse}
+	  ]
 
 \clearpage
 \section{Distributions \& \\ probabilities} % (fold)
@@ -83,7 +82,7 @@ bottom =  3 cm]{geometry}
 	\subsection{} % (fold)
 	\label{sub:}
 	Assuming that little Peter is a fair pal, and is using fair coins then the probability of success (heads) follows the binomial distribution.
-	If we call $n$ the number of tries, $p= \frac{1}{2}$ the probability for each event to success, and $r$ the number of success out of $n$ tries:
+	If we call $n$ the number of tries, $p= \frac{1}{2}$ the probability for each event to success, and $r$ the number of success out of $n$ tries: 
 	\begin{multline}
 	\label{eq:bin}
 		P (n,r) = \frac{n!}{r!(n-r)!} p ^ r (1-p)^{n-r} \\ 
@@ -135,7 +134,8 @@ bottom =  3 cm]{geometry}
 	\end{figure}
 	The result obtained are summarized in Table~\ref{tab:res}.
 	\begin{table}[h]
-		\caption{Results}
+		\caption{Results. The averages and their errors are reported in units of:
+		$10^{-11} m^3 kg^{-1} s^{-2}$}
 		\label{tab:res}
 		\begin{center}
 			\begin{tabular}{l|ccc}
@@ -158,8 +158,67 @@ bottom =  3 cm]{geometry}
 	The probability of the fit is not particularity high but is expected due to the low number of measurements.
 	Lastly it is possible to note that the probability to get $\chi ^2 \gtrsim 12.261 $ is $ \lesssim 0.012$ according the the $\chi ^2$ distribution (Figure~\ref{fig:xpdf}).
 \subsection{} % (fold)
-	\label{sub:}
+\label{sub:gridiron}
+	The uncertainty on a time measurement with a gridiron pendulum is:
+	\begin{equation}
+		\sigma_t  = 2 \pi \sqrt{ (\frac{1}{2 \sqrt{g L }} ) ^{2} \sigma_L ^2 +
+		\sigma_g ^2 (\frac{\sqrt{L}}{2} g^{-\frac{3}{2}})^2
+		}
+	\end{equation}
+	where L is the length of the pendulum, g is the gravitational constant with an error $\sigma_g$.
+	If ones consider that the error on the measurement on the length is \textbf{only} related to the thermal expansion of the materials making the pendulum then $\sigma_L$ can be calculated as:
+	\begin{equation}
+		\sigma_L = \sum_i \alpha_i  \Delta T  L_i
+	\end{equation}
+	where $\alpha_i$ is the linear coefficient of expansion for the \emph{ith} material,$L_i$ its length and $\Delta T $ the temperature fluctuation of the system.
 
+	If the pendulum is made of a single component:
+	\begin{equation}
+	\sigma_t  = \pi \sqrt{L \left(\frac{DT^{2} \left(a_{1} \right)^{2}}{g} + \frac{\sigma_{g}^{2}}{g^{3}}\right)}
+	\end{equation}
+	whereas if the pendulum is made of two components with a length ratio of $\lambda$:
+	\begin{equation}
+	\sigma_t  = \pi \sqrt{L \left(\frac{DT^{2} \left(a_{1} + a_{2} \lambda \right)^{2}}{g} + \frac{\sigma_{g}^{2}}{g^{3}}\right)}
+	\end{equation}
+
+	It's easy to see that the error coming from the thermal expansion can be killed by choosing the correct material combination such that $ \left(a_{1} + a_{2} \lambda\right) \approx 0 $. Strangely enough that's the case for the iron/brass combo.
+	% subsection  (end)
+\subsection{} % (fold)
+\label{sub:snell}
+	To calculate the index of refraction (IOR) of a solution ($n_{sol}$) with respect to air one has to rearrange Snell's law and to calculate the error ($\sigma n_{sol}$) one has to consider the IOR of air a value ($n_{air} =1 $) without error.
+	\begin{equation}
+	n_{sol} = \frac{\theta_{air}}{\theta_{solution}} 
+	\end{equation}
+
+	\begin{multline}
+	\pi \sqrt{L \left(\frac{DT^{2} \left(a_{1} - a_{2} \lambda\right)^{2}}{g} + \frac{\sigma_{g}^{2}}{g^{3.0}}\right)}
+	\end{multline}
+	To determine the percentage and its error of sugar in the solution, using two known and error-less standard $n_1 = 1.3330$, and $n_2 = 1.4774$ for a  0\% and a 75\% solution respectively one has to use the following equations:
+	\begin{equation}
+	\% sugar = ( n_{sol} - 1.3330) \frac{75}{ (1.4774- 1.3330)}
+	\end{equation}
+	\begin{equation}
+		\sigma_{\%} = \frac{75}{ (1.4774- 1.3330)} \sigma_{n_{sol}}
+	\end{equation}
+	The results are reported in Table~\ref{tab:snell}.
+	\begin{table}[h!]
+		\caption{Snell's law results}
+		\label{tab:snell}
+		\begin{center}
+			\begin{tabular}{l|cc}
+			\hline
+
+			\hline
+			\textbf{} & \textbf {$n_{sol}$ } & \textbf{ \% sugar} \\
+			\hline
+				value & 1.385  & 27 \\
+				error & 0.008 & 4 \\
+			\hline
+
+			\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
 	% subsection  (end)
 
 \section{Monte Carlo} % (fold)
