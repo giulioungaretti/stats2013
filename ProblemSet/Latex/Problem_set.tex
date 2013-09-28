@@ -60,7 +60,7 @@
 	\begin{equation}
 	\mathbb{E} [t] = \int_{t_0}^{\infty} t \operatorname{f}{(t) d t } \longrightarrow  t_0 + \tau
 	\end{equation}
-	It's nice to note that $t_0 = 0$ it matches the well known result for the exponential distribution.
+	It's nice to note that for $t_0 = 0$ it matches the well known result for the exponential distribution.
 	The width could be quantified with the variance as:
 	\begin{multline}
 		Var(t) = \mathbb{E}[x^2] - (\mathbb{E}[x])^2 = \\
@@ -82,25 +82,25 @@
 	\subsection{} % (fold)
 	\label{sub:}
 	Assuming that little Peter is a fair pal, and is using fair coins then the probability of success (heads) follows the binomial distribution.
-	If we call $n$ the number of tries, $p= \frac{1}{2}$ the probability for each event to success, and $r$ the number of success out of $n$ tries: 
+	If we call $n$ the number of tries, $p= \frac{1}{2}$ the probability for each event to success, and $r$ the number of success out of $n$ tries, the probability is the following: 
 	\begin{multline}
 	\label{eq:bin}
 		P (n,r) = \frac{n!}{r!(n-r)!} p ^ r (1-p)^{n-r} \\ 
 		 = \tbinom n r p ^ r (1-p)^{n-r}
 	\end{multline}
-	The \emph{chance} of getting 14 or more heads with 20 coin flips is low. As it is possible to see in Figure~\ref{fig:lil}. The probability of getting 14 heads is $\approx 0.036$, and by integrating equation \ref{eq:bin} from r=14 to infinity it is possible to quantify the aforementioned low chance.
+	The \emph{chance} of getting 14 or more heads with 20 coin flips is low, as it is possible to see in~Figure~\ref{fig:lil}. The probability of getting 14 heads is~$\approx~0.036$, and by integrating equation~\ref{eq:bin} from r=14 to infinity it is possible to quantify the aforementioned low chance.
 	\begin{figure}[h]
 		\begin{center}
 			\includegraphics[width=.4\textwidth]{fig/lil.pdf}
 		\end{center}
-		\caption{Probability of coin flips. The parameters are reported in the legend, and the shadowed area quantifies the chance of getting 14 or more heads.}
+		\caption{Probability of coin flips. The parameters are reported in the legend; the shadowed area quantifies the chance of getting 14 or more heads.}
 		\label{fig:lil}
 	\end{figure}
 
 
 	To find the chance that little Peter gets at least 18 coin at once when flipping 20 coins 100 times, first the probability $P_{18}$ is calculated with equation \ref{eq:bin} using $p= \frac{1}{2}$, $n=20$, and $r=18$.
 	It is easy to see that the distribution of the chances of getting at least 18 successes is still binomial but with p = $P_{18}$, $n=100$, and $r=1$.
-	The probability of getting one time a success is: $P(1) \approx 0.0177$. The chance of getting more than one is quantified as said before and it is rapresenented as the shaded area in Figure~\ref{fig:lil2}
+	The probability of getting one time a success is: $P(1) \approx 0.0177$. The chance of getting more than one is quantified as said before and it is rapresenented as the shaded area in Figure~\ref{fig:lil2}.
 
 	\begin{figure}[h]
 		\begin{center}
@@ -113,18 +113,21 @@
 % section Distributions and probabilities (end)
 \section{Error propagation} % (fold)
 \label{sec:error_propagation}
-\subsection{} % (fold)
+\subsection{} % sub:gravity (fold)
 	Three different ways are employed to calculate the average of the given measurements, namely the arithmetic mean, a error weighted mean and finally a fit with a zeroth order polynomial.
 	The last two options require to accept and believe in the reported experimental errors.
 	The results are reported in Figure~\ref{fig:g}.
+
 	\begin{figure}[h!]
 		\begin{center}
 			\includegraphics[width=.4\textwidth]{fig/g.pdf}
 		\end{center}
-		\caption{Graphical presentation of the given measurements and three differently calculated averages. The shadowed areas around each average value are $\pm \sigma_{\mu}$ the associated error.}
+		\caption{Graphical presentation of the given measurements and three differently calculated averages. The shadowed areas around each average value are plus and minus $\sigma_{\mu}$, the associated error.}
 		\label{fig:g}
 	\end{figure}
+
 	The $\chi ^2 $ probability density function is reported in Figure~\ref{fig:xpdf} along with the probability of getting the same $\chi ^2 $ found in the aforementioned zeroth order polynomial fit.
+
 	\begin{figure}[!]
 		\begin{center}
 			\includegraphics[width=.4 \textwidth]{fig/xpdf.pdf}
@@ -133,16 +136,16 @@
 		\label{fig:xpdf}
 	\end{figure}
 	The result obtained are summarized in Table~\ref{tab:res}.
-	\begin{table}[h]
-		\caption{Results. The averages and their errors are reported in units of:
-		$10^{-11} m^3 kg^{-1} s^{-2}$}
+
+	\begin{table}[htpb]
+		\caption{Results. The averages and their errors are reported in units of: $10^{-11} m^3 kg^{-1} s^{-2}$.}
 		\label{tab:res}
 		\begin{center}
 			\begin{tabular}{l|ccc}
 			\hline
 
 			\hline
-			\textbf{method} & \textbf{average} & \textbf{uncertainty} & \textbf{$\chi ^2 $,(prob)} \\
+			\textbf{method} & \textbf{average} & \textbf{uncertainty} & \textbf{$\chi ^2 $(prob)} \\
 			\hline
 			fit & 6.5 & .2 & 12.261 (0.031) \\
 			$<G> $ & 6.9 & .3 & - \\
@@ -152,9 +155,10 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
+
 	% section error_propagation (end)
 	As it possible to see the fit is the method that is better representing the data with an average value.
-	Moreover it is also compatible with the \emph{true} value of G (=6.67).
+	Moreover it is also compatible with the \emph{true} value of G ($ G = 6.6738 \pm .0008  \times 10^{-11} \ \mbox{m}^3 \ \mbox{kg}^{-1} \ \mbox{s}^{-2} $).
 	The probability of the fit is not particularity high but is expected due to the low number of measurements.
 	Lastly it is possible to note that the probability to get $\chi ^2 \gtrsim 12.261 $ is $ \lesssim 0.012$ according the the $\chi ^2$ distribution (Figure~\ref{fig:xpdf}).
 \subsection{} % (fold)
@@ -166,11 +170,11 @@
 		}
 	\end{equation}
 	where L is the length of the pendulum, g is the gravitational constant with an error $\sigma_g$.
-	If ones consider that the error on the measurement on the length is \textbf{only} related to the thermal expansion of the materials making the pendulum then $\sigma_L$ can be calculated as:
+	If one considers that the error on the measurement on the length is \textbf{only} related to the thermal expansion of the materials making the pendulum then $\sigma_L$ can be calculated as:
 	\begin{equation}
 		\sigma_L = \sum_i \alpha_i  \Delta T  L_i
 	\end{equation}
-	where $\alpha_i$ is the linear coefficient of expansion for the \emph{ith} material,$L_i$ its length and $\Delta T $ the temperature fluctuation of the system.
+	where $\alpha_i$ is the linear coefficient of expansion for the \emph{ith} material, $L_i$ its length and $\Delta T $ the temperature fluctuation of the system.
 
 	If the pendulum is made of a single component:
 	\begin{equation}
@@ -185,14 +189,15 @@
 	% subsection  (end)
 \subsection{} % (fold)
 \label{sub:snell}
-	To calculate the index of refraction (IOR) of a solution ($n_{sol}$) with respect to air one has to rearrange Snell's law and to calculate the error ($\sigma n_{sol}$) one has to consider the IOR of air a value ($n_{air} =1 $) without error.
+	To calculate the index of refraction (IOR) of a solution ($n_{sol}$) with respect to air one has to rearrange Snell's law and to calculate the error ($\sigma_{n_{sol}}$) one has to consider the IOR of air a value ($n_{air} =1 $) without error.
 	\begin{equation}
-	n_{sol} = \frac{\theta_{air}}{\theta_{solution}} 
+	n_{sol} = \frac{ sin(\theta_{air})}{sin(\theta_{sol})} 
 	\end{equation}
 
 	\begin{multline}
-	\pi \sqrt{L \left(\frac{DT^{2} \left(a_{1} - a_{2} \lambda\right)^{2}}{g} + \frac{\sigma_{g}^{2}}{g^{3.0}}\right)}
-	\end{multline}
+	\sigma_{n_{sol}} = (\left[\frac{cos(\theta_{air})}{sin(\theta_{sol})}  \sigma_{air} \right]^2 + \\
+	+ \left[ \frac{2 cos(\theta_{sol})}{1+cos(\theta_{sol})-1}  sin(\theta_{air}) \sigma_{sol}  \right] ^2 )^{\frac{1}{2}}
+	\end{multline} 
 	To determine the percentage and its error of sugar in the solution, using two known and error-less standard $n_1 = 1.3330$, and $n_2 = 1.4774$ for a  0\% and a 75\% solution respectively one has to use the following equations:
 	\begin{equation}
 	\% sugar = ( n_{sol} - 1.3330) \frac{75}{ (1.4774- 1.3330)}
