@@ -67,15 +67,15 @@
 		= 
 		\int_{t_0}^{\infty} t^2 \operatorname{f}{(t) d t } 
 		-(\int_{t_0}^{\infty} t \operatorname{f}{(t) d t })^2 = \\
-		= 2 \tau ^ 2 - 2 t_o \tau +t_0 ^2  - ( t_0 + \tau ) ^ 2 = \\
-		= \tau ^ 2 - 4 \tau t_0 
+		= 2 \tau ^ 2 + 2 t_o \tau +t_0 ^2  - ( t_0 + \tau ) ^ 2 = \\
+		= \tau ^ 2
 	\end{multline}
 	and once more if $t_0 = 0 $ the variance of the starting PDF coincides withe the one of the exponential distribution. 
 	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[width= 0.4 \textwidth]{fig/graph.pdf}
 		\end{center}
-		\caption{Plot of the given PDF, for different values of $ \tau $ and $t_0 $. Dashed lines are the calculated expectation values, and the shaded area represent $\pm$ one square root of the variance around the mean.}
+		\caption{Plot of the given PDF, for different values of $ \tau $ and $t_0 $. Dashed lines are the calculated expectation values, and the shaded area represent plus and minus one square root of the variance around the mean.}
 		\label{fig:pdf}
 	\end{figure}
 	A graphical representation of all said above is found in Figure~\ref{fig:pdf}.
@@ -88,7 +88,7 @@
 		P (n,r) = \frac{n!}{r!(n-r)!} p ^ r (1-p)^{n-r} \\ 
 		 = \tbinom n r p ^ r (1-p)^{n-r}
 	\end{multline}
-	The \emph{chance} of getting 14 or more heads with 20 coin flips is low, as it is possible to see in~Figure~\ref{fig:lil}. The probability of getting 14 heads is~$\approx~0.036$, and by integrating equation~\ref{eq:bin} from r=14 to infinity it is possible to quantify the aforementioned low chance.
+	The \emph{chance} of getting 14 or more heads with 20 coin flips is \emph{low}, as it is possible to see in~Figure~\ref{fig:lil}. The probability of getting 14 heads is~$\approx~0.036$, and by integrating equation~\ref{eq:bin} from r=14 to infinity it is possible to quantify the aforementioned low chance.
 	\begin{figure}[h]
 		\begin{center}
 			\includegraphics[width=.4\textwidth]{fig/lil.pdf}
