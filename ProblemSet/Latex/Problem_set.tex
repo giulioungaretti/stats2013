@@ -73,7 +73,7 @@
 	and once more if $t_0 = 0 $ the variance of the starting PDF coincides withe the one of the exponential distribution. 
 	\begin{figure}[htb]
 		\begin{center}
-			\includegraphics[width= 0.4 \textwidth]{fig/graph.pdf}
+			\includegraphics[width= 0.43\textwidth]{fig/graph.pdf}
 		\end{center}
 		\caption{Plot of the given PDF, for different values of $ \tau $ and $t_0 $. Dashed lines are the calculated expectation values, and the shaded area represent plus and minus one square root of the variance around the mean.}
 		\label{fig:pdf}
@@ -88,29 +88,24 @@
 		P (n,r) = \frac{n!}{r!(n-r)!} p ^ r (1-p)^{n-r} \\ 
 		 = \tbinom n r p ^ r (1-p)^{n-r}
 	\end{multline}
-	The \emph{chance} of getting 14 or more heads with 20 coin flips is \emph{low}, as it is possible to see in~Figure~\ref{fig:lil}. The probability of getting 14 heads is~$\approx~0.036$, and by integrating equation~\ref{eq:bin} from r=14 to infinity it is possible to quantify the aforementioned low chance.
+	The \emph{chance} of getting 14 or more heads with 20 coin flips is \emph{low}, as it is possible to see in~Figure~\ref{fig:lil}. The probability of getting more than 14 heads is calculated summing equation~\ref{eq:bin} for r going from 14 to 20.
+	The probability is  $\approx 5 \% $.
+
 	\begin{figure}[h]
 		\begin{center}
-			\includegraphics[width=.4\textwidth]{fig/lil.pdf}
+			\includegraphics[width=.42 \textwidth]{fig/lil.pdf}
 		\end{center}
 		\caption{Probability of coin flips. The parameters are reported in the legend; the shadowed area quantifies the chance of getting 14 or more heads.}
 		\label{fig:lil}
 	\end{figure}
 
 
-	To find the chance that little Peter gets at least 18 coin at once when flipping 20 coins 100 times, first the probability $P_{18}$ is calculated with equation \ref{eq:bin} using $p= \frac{1}{2}$, $n=20$, and $r=18$.
+	To find the chance that little Peter gets at least 18 coin at once when flipping 20 coins 100 times, first the probability $P_{18}$ is calculated summing equation \ref{eq:bin} using $p= \frac{1}{2}$, $n=20$, and $r=[18,20]$.
 	It is easy to see that the distribution of the chances of getting at least 18 successes is still binomial but with p = $P_{18}$, $n=100$, and $r=1$.
-	The probability of getting one time a success is: $P(1) \approx 0.0177$. The chance of getting more than one is quantified as said before and it is rapresenented as the shaded area in Figure~\ref{fig:lil2}.
-
-	\begin{figure}[h]
-		\begin{center}
-			\includegraphics[width=.4\textwidth]{fig/lil_2.pdf}
-		\end{center}
-		\caption{Probability of getting out of 100 tries 18 successes out of 20 coin filps. The parameters are reported in the legend, and the shadowed area quantifies the chance of getting one or more times 18 successes.}
-		\label{fig:lil2}
-	\end{figure}
+	The probability of getting one time a success is: $P(1) \approx 0.0002$. The chance of getting more than one is quantified as said before and it is  $\approx 2 \% $.
 % subsection  (end)
 % section Distributions and probabilities (end)
+\clearpage
 \section{Error propagation} % (fold)
 \label{sec:error_propagation}
 \subsection{} % sub:gravity (fold)
