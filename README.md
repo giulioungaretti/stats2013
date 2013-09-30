@@ -20,6 +20,7 @@ The required packages are the latest stable pylab ensemble and scipy along with 
 
 [**Section 2.3**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/2.3.ipynb)
 
+[**Section 3.1**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/3.1.ipynb)
 =====================================================
 
 ## Project 2
