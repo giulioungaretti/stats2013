@@ -225,16 +225,25 @@
 \label{sec:monte_carlo}
  Having a PDF:
  \begin{equation}
+ \label{eq:mcpdf}
  	\operatorname{f}{\left (x \right )} = \frac{C}{x^{3}}
  \end{equation}
  normalized for the value of $C=2$.
  We want to generate numbers that follow this PDF. 
- The transformation method would not work as the integral of the PDF:
+ The transformation method would  work as the integral of the PDF:
  \begin{multline}
- 	\int_{-\infty}^{x(r)} \frac{2}{x^{3}}\, dx = - \frac{1}{x(r)^{2}} = r
+ 	\int_{1}^{x(r)} \frac{2}{x^{3}}\, dx = 1 - \frac{1}{x(r)^{2}} = r
  \end{multline}
-is not invertible.
-Hit or miss or combination or both!
+is  invertible, given that $r \in [0,1[$. 
+A thousand number according to the transformation method are calculated and they are reported in 
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width = .5 \textwidth]{fig/monteCPDF}
+	\end{center}
+	\caption{One thousand number following the PDF reported in equation \ref{eq:mcpdf},generated via a Montecarlo Method.}
+	\label{fig:figure1}
+\end{figure}
 % section monte_carlo (end)
 
 \section{Statistical tests} % (fold)
