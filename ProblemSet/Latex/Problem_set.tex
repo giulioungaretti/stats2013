@@ -222,8 +222,8 @@
 	% subsection  (end)
 
 \section{Monte Carlo} % (fold)
-\subsection{}
 \label{sec:monte_carlo}
+\subsection{}
  Having a PDF:
  \begin{equation}
  \label{eq:mcpdf}
@@ -235,19 +235,28 @@
  \begin{multline}
  	\int_{1}^{x(r)} \frac{2}{x^{3}}\, dx = 1 - \frac{1}{x(r)^{2}} = r
  \end{multline}
-is  invertible, given that $r \in [0,1[$. 
-A thousand number according to the transformation method are calculated and they are reported in 
+	is  invertible, given that $r \in [0,1[$. 
+	A thousand number according to the transformation method are calculated and they are reported in 
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width = .5 \textwidth]{fig/monteCPDF}
-	\end{center}
-	\caption{One thousand number following the PDF reported in equation \ref{eq:mcpdf},generated via a Montecarlo Method.}
-	\label{fig:figure1}
-\end{figure}
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics[width = .4 \textwidth]{fig/monteCPDF}
+		\end{center}
+		\caption{One thousand number following the PDF reported in equation \ref{eq:mcpdf},generated via a Montecarlo Method.}
+		\label{fig:figure1}
+	\end{figure}
 
 \subsection{}
-
+	The distribution of HT signals $N_{HT}$ for electrons follows a binomial distribution where the number of tries is the number of straws and the probability of each try (straw) is 22.6 \%.
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics[width= .4\textwidth]{fig/trt.pdf}
+		\end{center}
+		\caption{Bar Plot depicting the distribution of the HT signals for electron. The distribution is a binomial distribution with the parameters reported in the legend.}
+		\label{fig:figure1}
+	\end{figure}
+	
+	A test requiring $N_{HT} \ge 6$ has an electron detection efficiency of 83.6 \%, and a pion efficiency of 0.3 \%.
 % section monte_carlo (end)
 
 \section{Statistical tests} % (fold)
