@@ -247,6 +247,56 @@
 	\end{figure}
 
 
+\subsection{}
+
+	The mean of a particular outcome for $n$ dice is given by: 
+
+	\begin{eqnarray}
+	\mu_{i} &=& n \frac{1}{s}
+	\end{eqnarray}
+
+	where $ s $ is the number of the sides of that particular dice. The mean of the sum is just the sum of the means so 
+
+	\begin{eqnarray}
+	\mu_{\sum} &=& \frac{\sum\limits_{i}^{s}i}{s}
+	\end{eqnarray}
+
+	For the different dice, the mean of the sum is again the sum of the means, so : 
+
+
+	\begin{eqnarray}
+	\mu_{\sum\sum} &=& \frac{10\sum\limits_{i=1}^{6}i}{6} +\frac{6\sum\limits_{i=1}^{8}i}{8}+\frac{3\sum\limits_{i=1}^{10}i}{10}\\
+	&=& 16.5+27+35\\
+	&=& 78.5
+	\end{eqnarray}
+
+
+	The variance of each possible outcome of a dice is a binomially distributed random variable, thus the variance is just like for a binomial distribution with number of tries $n$ : 
+
+	\begin{eqnarray}
+	\sigma^{2}&=& n p_{i}(1-p_{i})
+	\end{eqnarray}
+
+	The variance for the sum is in this case just the sum of the variances, since every dice is independent: 
+
+	\begin{eqnarray}
+	\sigma^{2} &=& \mu_{1}\frac{9}{10} + \mu_{2}\frac{7}{8} + \mu_{3}\frac{5}{6}\\
+	\rightarrow \sigma &=& 8.2 
+	\end{eqnarray}
+    Assuming the sum to follow a Gaussian distribution  the prob of having a sum $\ge$ 100 is tot value of sigma away which means a probability of cazzi.
+
+    Using a MC simulation bla bla bla bla.
+
+    The prob is esitameted for ddiferent number of tries.
+    \begin{figure}[h]
+    	\begin{center}
+    		\includegraphics[width = .5 \textwidth]{fig/histplotdices.pdf}
+    	\end{center}
+    	\caption{yoooooooo}
+    	\label{fig:figure1}
+    \end{figure}
+
+
 \section{Statistical tests} % (fold)
 \label{sec:statistical_tests}
 
