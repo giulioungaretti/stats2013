@@ -22,8 +22,23 @@ The required packages are the latest stable pylab ensemble and scipy along with 
 
 [**Section 3.1**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/3.1.ipynb)
 
+[**Section 3.2**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/3.2.ipynb)
+
+[**Section 4.1**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/4.1.ipynb)
+
+[**Section 5.1**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/5.1.ipynb)
+
+
+[**Section 5.2**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/5.2.ipynb)
 
 
 =====================================================
 
 ## Project 2
+
+Analyzing Gini's coefficients correlations with other performance indices.
+
+Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from datamarket.com to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
+
+
+
