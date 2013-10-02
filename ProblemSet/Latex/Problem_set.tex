@@ -336,7 +336,7 @@
 		\begin{center}
 			\includegraphics[width= .5 \textwidth]{fig/fitX.pdf}
 		\end{center}
-		\caption{Histogram of the data and $chi ^2 $ fit with different distributions. The error bars are the square root of values in the bin. Probability of the fit is reported in the text.}
+		\caption{Histogram of the data and $\chi ^2 $ fit with different distributions. The error bars are the square root of values in the bin. Probability of the fit is reported in the text.}
 		\label{fig:fitX}
 	\end{figure}
 
@@ -353,16 +353,17 @@
 	Somethings is off. 
 	The same test is then performed  with python. The results matches with the writer expectations and with  both Figure~\ref{fig:fitX} and Figure~\ref{fig:test} as the probability of being from the same distribution is:
 	\begin{table}[tb]
-		\caption{KS test results}
+		\caption{KS test results. Probabilities  of the data  coming from the same distribution as the column name.}
 		\label{tab:tests}
 		\begin{center}
-			\begin{tabular}{l|ccc}
+			\begin{tabular}{l|cccc}
 			\hline
 	
 			\hline
-			\textbf{} & \textbf{Gauss} & \textbf{Poly} &  \textbf{Skewed} \\
+			\textbf{} & \textbf{Gauss} & \textbf{Poly} &  \textbf{Skewed} & \textbf{Poisson} \\
 			\hline
-				 & & \\
+			ROOT	& $9.8e^{-10 }$& $9.8e^{-10 }$  &  $9.8e^{-10 }$  & $5.5e^{-05}$ \\
+			python	 & 0.85  & 0.99   & 0.93 & 0.24   \\
 			\hline
 	
 			\hline
