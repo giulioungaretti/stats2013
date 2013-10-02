@@ -307,7 +307,7 @@
 			\label{fig:figure1}
 		\end{figure}
 		
-		A test requiring $N_{HT} \ge 6$ has an electron detection efficiency of 83.6 \%, and a pion efficiency of 0.3 \%.
+		A test requiring $N_{HT} \ge 6$ has an electron detection efficiency of 83.6\%, and a pion efficiency of~0.3\%.
 
 % section statistical_tests (end)
 
@@ -337,15 +337,15 @@
 		Out of desperation the data is turned into sorted un-binned arrays and a KS test is attempted (first using ROOT and then pure Python).
 		The results from ROOT are not understood by the writer.
 
-		In Figure~\ref{fig:test} the cumulative distribution for the data and for the proposed distribution are reported.
+		In Figure~\ref{fig:test} the sorted distributions for the data and for the proposed distribution are reported.
 
-		The  ROOT KS result show that probability of the data  being from the same distribution as: the skew,the Gaussian, the polynomial is the same and very low whereas the  from Poissonian is different and higher.
+		The  ROOT KS result shows that probability of the data  being from the same distribution as: the skew,the Gaussian, the polynomial is the same and very low whereas the  from Poissonian is different and higher.
 		A sanity check of the algorithm also confirms that each is distribution gives a unity probability if tested with itself.
 		The complete data is reported in table \ref{tab:tests}.
 
 		The surprising result, that the probability for the skew and the Gaussian is the same and lower than for the Poissonian, is really not understood and clashes with the writer's eye check of Figure~\ref{fig:fitX} and Figure~\ref{fig:test}.
 		Something must be off. 
-		The same test is then performed  with python. The results matches with the writer expectations and with  both Figure~\ref{fig:fitX} and Figure~\ref{fig:test}.
+		The same test is  performed  with python. The results matches with the writer expectations and with  both Figure~\ref{fig:fitX} and Figure~\ref{fig:test}.
 		The complete data is reported in table \ref{tab:tests}.
 		\begin{table}[tb]
 			\caption{KS test results. Probabilities  of the data  coming from the same distribution as the column name.}
@@ -366,7 +366,7 @@
 			\end{center}
 		\end{table}
 
-			The polynomial gives  the best fit in any (meaningful)test. Whereas the Poissoinan is always the worst as it should.
+			The polynomial gives  the best fit in any (meaningful) test. Whereas the Poissoinan is always the worst, as it should.
 
 		\begin{figure}[h!]
 			\begin{center}
