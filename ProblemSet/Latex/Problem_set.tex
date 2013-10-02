@@ -283,19 +283,20 @@
 	\sigma^{2} &=& \mu_{1}\frac{9}{10} + \mu_{2}\frac{7}{8} + \mu_{3}\frac{5}{6}\\
 	\rightarrow \sigma &=& 8.2 
 	\end{eqnarray}
-    Assuming the sum to follow a Gaussian distribution  the prob of having a sum $\ge$ 100 is tot value of sigma away which means a probability of cazzi.
+    Assuming the sum to follow a Gaussian distribution  the prob of having a sum $\ge$ 100 is $\approx 2.6$ sigma away which means a probability of $< 5\%$ .
 
-    Using a MC simulation bla bla bla bla.
-
-    The prob is esitameted for ddiferent number of tries.
+    Using a Monte Carlo (MC) simulation the chance of getting a sum $\ge$ 100 is estimated for different number of runs. It expected that increasing  the
+    number of runs will increase the probability as the distribution turn more and more into a Gaussian.
+    The results of the MC simulation are reported in Figure~\ref{fig:figure1}.
     \begin{figure}[h]
     	\begin{center}
     		\includegraphics[width = .5 \textwidth]{fig/histplotdices.pdf}
     	\end{center}
-    	\caption{yoooooooo}
+    	\caption{MC simulation of the sum of  10-sided, 6 8-sided, and 10 6-sided dice.}
     	\label{fig:figure1}
     \end{figure}
 
+    For 10, 100, 10000, 100000 runs the probability is 0\%,0\%, 0.01\%, 0.04 \% respectively.
 
 \section{Statistical tests} % (fold)
 \label{sec:statistical_tests}
@@ -320,6 +321,48 @@
 
 \section{Fitting data} % (fold)
 \label{sec:fitting_data}
+\subsection{}
+Counting the number of photons from an experiment yield some binned data.
+To calculate the mean $\mu$ the formula for binned mean is used and supposing  a unitless property is measured; the mean is:
+\begin{equation}
+	 \mu = 0.10 \pm 0.08
+\end{equation}
+The value is consistent with zero (the distance is less than two  $\sigma$). Yet the $\sigma$ itself is really big.
+Different fit are tested with different tests. The starting models are a Gaussian distribution a skewed Gaussian distribution and Poisson distribution.
+Two test are performed, a $\chi ^2 $ test and  unbinned Kolmogorov-Smirnov (KS) test.
+
+The $\chi ^2 $ fit are reported in Figure~\ref{fig:fitX}. The Poisson distribution seems to be the most unprovable  with p = $1.16e^{-27}$, followed by the Gaussian with p = 0.0002 and the lastly the skwed Gaussian with p = 0.0009. None of the fits are satisfying.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width= .5 \textwidth]{fig/fitX.pdf}
+	\end{center}
+	\caption{Histogram of the data and $chi ^2 $ fit with different distributions. The error bars are the square root of values in the bin. Probability of the fit is reported in the text.}
+	\label{fig:fitX}
+\end{figure}
+
+Out of desperation the data is turned into sorted un-binned arrays and a KS test is attempted.
+The results are not understood by the writer.
+
+In Figure~\ref{fig:test} the cumulative distribution for the data and for the proposed distribution are reported.
+
+The KS result show that probability of the data  being from the same distribution as: the skew is $8e^{-09}$, the Gaussian  $8e^{-09}$ , the Poissonian $2e^{-04}$.
+A sanity check of the algorithm also confirms that each is distribution gives a unity probability if tested with itself.
+
+The surprising result that the probability for the skew and the Gaussian is the same and lower than for the Poissonian is really not understood and clashes with the writer's eye check of Figure~\ref{fig:fitX} and Figure~\ref{fig:test}.
+
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width= .5 \textwidth]{fig/ks-test.pdf}
+	\end{center}
+	\caption{KS test of the sorted data and cumulative distribution of the proposed fit with different functions. Results  of the KS test are reported in the text.}
+	\label{fig:test}
+\end{figure}
+
+
+\subsection{}
+
 
 \section{notes}
 A git-hub repo with all the source code is available at:
