@@ -1,5 +1,6 @@
 Repository for the applied statistic course fall 2013
-=====================================================
+
+
 
 ## Problem set 1
 Problems set rendered notebooks follows in the next section.
@@ -32,13 +33,19 @@ The required packages are the latest stable pylab ensemble and scipy along with 
 [**Section 5.2**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/5.2.ipynb)
 
 
-=====================================================
 
 ## Project 2
+
+### Description 
 
 Analyzing Gini's coefficients correlations with other performance indices.
 
 Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from datamarket.com to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
 
+data source:
 
 
+### IPython notebooks:
+
+
+[**Section test**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/ProblemSet/test.ipynb)
