@@ -48,4 +48,4 @@ data source:
 ### IPython notebooks:
 
 
-[**Preliminary data analysis **](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/data-giulio.ipynb)
+[**Data munching notebook **](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data%20munching.ipynb)
