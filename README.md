@@ -42,10 +42,10 @@ Analyzing Gini's coefficients correlations with other performance indices.
 
 Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from datamarket.com to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
 
-data source:
 
 
 ### IPython notebooks:
 
+[**Data munching notebook **](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching.ipynb)
 
-[**Data munching notebook **](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data%20munching.ipynb)
+
