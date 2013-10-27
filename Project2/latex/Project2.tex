@@ -6,54 +6,62 @@
 	bottom =  2.8 cm]{geometry}
 
 	\usepackage{hyperref}
-
+    \usepackage{standalone}
+    \usepackage{pdfpages}
 	\usepackage{graphicx}  % needed for figures
 	\usepackage{dcolumn}   % needed for some tables
 	\usepackage{bm}        % for math
 	\usepackage{amssymb}   % for math
 	\usepackage{amsmath}
 	\usepackage{nameref}
+	\usepackage{todonotes}
+	\usepackage{booktabs}
 	\newcommand{\degree}{\ensuremath{^\circ}}
 	\def\mean#1{\left< #1 \right>}
-	%%% make INLINE SUBSECTIONS 
-		
+	%%% make INLINE SUBSECTIONS 		
 		% 1em is in the 'sep' slot, which controls how much space is between the numbering and the section heading text. 1em is equal to the width of 1 times the width of a capital 'M' in font you're using. 
 	\usepackage{titlesec}
 	\titleformat{\subsection}[runin]
 	{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 		% The formatting settings above other than the 'runin' option are the default settings for subsections. 
 
+\DeclareMathOperator\arctanh{arctanh}
+\DeclareMathOperator\cov{cov}
 
 	\begin{document}
-	\title{Project 2 - }
+	\title{Project 2 - Time series correlation of GINI and GDP}
 	\author{Giulio  Johannes Katrine Marina}
 	\date{\today}
 	\twocolumn[
 	   \begin{@twocolumnfalse}
 	     \maketitle
 	     \begin{abstract}
-		Analyzing Gini's coefficients correlations with other performance indices.
-		Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from datamarket.com to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
+		Using data from the World Bank (20 years time series of 156 countries) correlations between income inequality and econimic growth were analyzed. Although there are no obvious global trends, we provided compelling evidence for different correlations when grouping the contries by economic performance or region\\
+		
 	     \end{abstract}
-
-	     \tableofcontents
+% 
+	     % \tableofcontents
 	   \end{@twocolumnfalse}
 	  ]
 
+\input{kat_intro}s
+% \endgroup
+
+
+\input{j}
+
+\input{g}
+\clearpage
+\input{marina}
+
 \clearpage
 
-\section{section name} % (fold)
-\label{sec:section_name}
-	\subsection{subsection name} % (fold)
-	\label{sub:subsection_name}
-	
-	% subsection subsection_name (end)
-% section section_name (end)
-Analyzing Gini's coefficients correlations with other performance indices.
-
-Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from \url{datamarket.com} to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
-
+%\section{ conclusions }
+\includepdf[pages={1}]{results.pdf}
+\includepdf[pages={2}]{results.pdf}
 \clearpage
+
+
 \section{notes}
 
 
