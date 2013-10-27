@@ -38,14 +38,14 @@ The required packages are the latest stable pylab ensemble and scipy along with 
 
 ### Description 
 
-Analyzing Gini's coefficients correlations with other performance indices.
-
-Using GINI index from the World Bank ( 1978 - 2011 time series of 156 countries) and the annual GDP growth data from the World Bank ( same 156 countries, 1961 -2012 time series), numbers from datamarket.com to evaluate correlations between income inequality and growth. The hypothesis is that we can group the countries by the correlations and find similarities, i.e. regional or level of development.
-
+Using data from the World Bank (20 years time series of 156 countries) correlations between income inequality and econimic growth were analyzed. Although there are no obvious global trends, we provided compelling evidence for different correlations when grouping the contries by economic performance or region.
 
 
 ### IPython notebooks:
+Data munching notebook  for the analysis of the data.
 
-[**Data munching notebook **](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching.ipynb)
+[**Data munching notebook**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching_final.ipynb)
+
+
 
 
