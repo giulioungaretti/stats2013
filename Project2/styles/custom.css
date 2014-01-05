@@ -64,9 +64,13 @@ family    }
         }
 
     div.output {
-        width: 99%;
+        /*max-width:900px;*/
+        /*width: 99%;*/
+        text-align: center;
+        width: 90%;
         margin-left:auto;
         margin-right:auto;
+
     }
 </style>
 <script>
