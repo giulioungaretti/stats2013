@@ -38,14 +38,17 @@ The required packages are the latest stable pylab ensemble and scipy along with 
 
 ### Description 
 
-Using data from the World Bank (20 years time series of 156 countries) correlations between income inequality and econimic growth were analyzed. Although there are no obvious global trends, we provided compelling evidence for different correlations when grouping the contries by economic performance or region.
+Using data from the World Bank (20 years time series of 156 countries) correlations between income inequality and economic growth were analyzed. Although there are no obvious global trends, we  found  evidence for different correlations when grouping the countries by economic performance or region.
+
+A stronger correlation is found when using k-means clustering instead of manual grouping by  by economic performance or region.
+
 
 
 ### IPython notebooks:
 Data munching notebook  for the analysis of the data.
 
-[**Data munching notebook**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching_final.ipynb)
+[**Data munching and correlation hunt**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching_final.ipynb)
 
-
+[**Clustering and Geographical Visualization**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/clustering.ipynb)
 
 
