@@ -49,6 +49,6 @@ Data munching notebook  for the analysis of the data.
 
 [**Data munching and correlation hunt**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Data_munching_final.ipynb)
 
-[**Clustering and Geographical Visualization**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/clustering.ipynb)
+[**Clustering and Geographical Visualization**](http://nbviewer.ipython.org/urls/raw.github.com/giulioungaretti/stats2013/master/Project2/Clustering.ipynb)
 
 
